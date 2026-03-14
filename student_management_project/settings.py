@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'students'
+    'student_management_application'
 ]
 
 MIDDLEWARE = [
@@ -76,11 +76,11 @@ WSGI_APPLICATION = 'student_management_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'student_management_project',   # nom de la base
-        'USER': 'root',              # utilisateur mysql
-        'PASSWORD': 'root',     # mot de passe mysql
-        'HOST': 'localhost',
-        'PORT': '3306',
+        'NAME': 'student_management_project',
+        'USER': 'root',
+        'PASSWORD': 'Abcd@1234',
+        'HOST': '127.0.0.1',
+        'PORT': '3306'
     }
 }
 
