@@ -1,0 +1,34 @@
+{% extends "student_management_application/base.html" %}
+{% load bootstrap5 %}
+
+{% block title %}Liste des Enseignants{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <h1 class="mb-4 text-center">Liste des Enseignants</h1>
+        <div class="table-responsive">
+            <table class="table table-striped table-hover table-bordered">
+                <thead class="table-dark">
+                    <tr>
+                        <th scope="col">Nom</th>
+                        <th scope="col">Matière</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for teacher in teachers %}
+                    <tr>
+                        <td>{{ teacher.name }}</td>
+                        <td>{{ teacher.subject }}</td>
+                    </tr>
+                    {% empty %}
+                    <tr>
+                        <td colspan="2" class="text-center text-muted">Aucun enseignant trouvé.</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}
